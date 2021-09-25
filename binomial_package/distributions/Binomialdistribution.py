@@ -2,8 +2,7 @@ import math
 import matplotlib.pyplot as plt
 from .Generaldistribution import Distribution
 
-
-class Binomial:
+class Binomial(Distribution):
     """ Binomial distribution class for calculating and 
     visualizing a Binomial distribution.
     
@@ -25,8 +24,6 @@ class Binomial:
     #       You can then calculate the mean and standard deviation with the following formula:
     #           mean = p * n
     #           standard deviation = sqrt(n * p * (1 - p))
-    
-    #       
 
     def __init__(self, prob=0.5, size=20):
 
@@ -45,7 +42,6 @@ class Binomial:
             float: mean of the data set
     
         """
-
         self.mean = self.n * self.p
         return self.mean
 
@@ -80,7 +76,6 @@ class Binomial:
         self.p = sum(self.data) / len(self.data)
         self.mean = self.calculate_mean()
         self.stdev = self.calculate_stdev()
-
         return self.p, self.n
 
 
