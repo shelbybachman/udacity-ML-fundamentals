@@ -1,6 +1,5 @@
 import math
 import matplotlib.pyplot as plt
-
 from .Generaldistribution import Distribution
 
 
@@ -157,13 +156,11 @@ class Binomial:
             Binomial: Binomial distribution
             
         """
-        # check that distributions have the same p
         try:
             assert self.p == other.p, 'p values are not equal'
         except AssertionError as error:
             raise
 
-        # add the distributions together
         result = Binomial()
         result.n = self.n + other.n
         result.p = self.p
